@@ -1,0 +1,131 @@
+.header {
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  flex: 1;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff0051 0%, #ffed00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #ffed00;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.favorites-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 0, 81, 0.2);
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 0, 81, 0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 81, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.favorites-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 26px rgba(255, 0, 81, 0.45);
+}
+
+.heart {
+  color: #ff0051;
+  font-size: 18px;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.count {
+  color: #ffed00;
+  font-weight: 700;
+  font-size: 16px;
+  min-width: 30px;
+}
+
+.favorites-label {
+  font-size: 11px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+.favorites-badge--active {
+  background: linear-gradient(135deg, #ff0051 0%, #ffed00 100%);
+  border-color: transparent;
+  box-shadow: 0 0 30px rgba(255, 237, 0, 0.6);
+}
+
+.favorites-badge--active .heart {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,60 @@
+.search-bar {
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 0, 50, 0.6);
+  box-shadow: 0 0 12px rgba(255, 0, 50, 0.4);
+
+  animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.search-input:focus {
+  text-shadow: 0 0 6px rgba(255, 255, 75, 0.6);
+}
+
+.search-icon {
+  font-size: 20px;
+  opacity: 0.8;
+  color: #ffea75;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 12px 20px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
