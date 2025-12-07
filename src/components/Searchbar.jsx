@@ -6,7 +6,7 @@ export default function SearchBar({ searchTerm, onSearchChange }) {
     <div className="search-bar glass">
       <input
         type="text"
-        placeholder="Search Pokémon by name..."
+        placeholder="Search Pokémon by their name..."
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
         className="search-input"
